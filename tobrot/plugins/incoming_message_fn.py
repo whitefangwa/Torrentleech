@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | Akshay C
+# (c) Shrimadhav U K | gautamajay52 | Akshay C | Jigarvarma2005
 
 import asyncio
 import logging
@@ -9,7 +9,7 @@ import time
 
 import aria2p
 import requests
-from tobrot import DOWNLOAD_LOCATION
+from tobrot import DOWNLOAD_LOCATION, J_STATUS
 from tobrot.helper_funcs.admin_check import AdminCheck
 from tobrot.helper_funcs.cloneHelper import CloneHelper
 from tobrot.helper_funcs.display_progress import progress_for_pyrogram
@@ -31,6 +31,13 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 LOGGER = logging.getLogger(__name__)
 
+async def upload_as_doc(client, message):
+   J_STATUS.UPLOAD_AS_DOC = "True"
+   jigarv = await message.reply_text("OK, Now i will upload as doc.....", quote=True)
+  
+async def upload_as_stream(client, message):
+   J_STATUS.UPLOAD_AS_DOC = "False"
+   jigar_v = await message.reply_text("OK, Now i will upload as Stream.....", quote=True)
 
 async def incoming_purge_message_f(client, message):
     """/purge command"""

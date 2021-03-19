@@ -54,7 +54,7 @@ async def incoming_purge_message_f(client, message):
 async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    #credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -116,7 +116,7 @@ async def incoming_message_f(client, message):
 async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
-    credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    #credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
     is_unzip = False
@@ -174,7 +174,7 @@ async def incoming_gdrive_message_f(client, message):
 async def incoming_youtube_dl_f(client, message):
     """ /ytdl command """
     g_id = message.from_user.id
-    credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
+    #credit = await message.reply_text(f"💀 Downloading for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
     # extract link from message

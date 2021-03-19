@@ -269,6 +269,10 @@ class Config(Config):
 
 * `/rename`: To rename the telegram files.
 
+* `/toggle_doc`: will toggle file uploads as document for media files (for leech command) for you.
+
+* `/toggle_stream`: will toggle file uploads as streamable video for media files (for leech command) for you.
+
 
 * ~Only work with direct link and youtube link for now~It is like u can add custom name as prefix of the original file name.
 Like if your file name is `gk.txt` uploaded will be what u add in `CUSTOM_FILE_NAME` + `gk.txt`

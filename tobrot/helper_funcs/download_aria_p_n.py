@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | Jigarvarma2005 
 
 # the logging things
 from tobrot.helper_funcs.upload_to_tg import upload_to_gdrive, upload_to_tg
@@ -393,12 +393,12 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     pass
                 #
                 if is_file is None:
-                    msgg = f"Conn: {file.connections} <b>|</b> GID: <code>{gid}</code>"
+                    msgg = f"<b>Connections🛰:</b> {file.connections} \n<b>├GID💾:</b> <code>{gid}</code>"
                 else:
-                    msgg = f"P: {file.connections} | S: {file.num_seeders} <b>|</b> GID: <code>{gid}</code>"
-                msg = f"\n`{downloading_dir_name}`"
-                msg += f"\n<b>Speed</b>: {file.download_speed_string()}"
-                msg += f"\n<b>Status</b>: {file.progress_string()} <b>of</b> {file.total_length_string()} <b>|</b> {file.eta_string()} <b>|</b> {msgg}"
+                    msgg = f"<b>Peers🍱:</b> {file.connections} \n<b>├Seeders🍣:</b> {file.num_seeders} \n<b>├GID💾:</b> <code>{gid}</code>"
+                msg = f"╭──────── ⌊ 📥 Downloading ⌉ \n│\n<b>├File🗃:</b> {downloading_dir_name}"
+                msg += f"\n<b>├Speed🧬:</b> {file.download_speed_string()}"
+                msg += f"\n<b>├Status📍:</b> {file.progress_string()} \n<b>├Size🗂:</b> {file.total_length_string()} \n<b>├ETA🕰</b> {file.eta_string()} \n<b>├</b>{msgg}\n<b>|</b>\n╰─── ⌊ ⚡️ using ⚙️engine aria2 ⌉"
                 #msg += f"\nSize: {file.total_length_string()}"
 
                 # if is_file is None :

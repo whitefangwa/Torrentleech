@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | Jigarvarma2005
 
 import asyncio
 import logging
@@ -22,7 +22,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import InputMediaAudio, InputMediaDocument, InputMediaVideo
 from requests.utils import requote_uri
 from tobrot import (DESTINATION_FOLDER, DOWNLOAD_LOCATION, EDIT_SLEEP_TIME_OUT,
-                    INDEX_LINK, RCLONE_CONFIG, TG_MAX_FILE_SIZE, UPLOAD_AS_DOC)
+                    INDEX_LINK, RCLONE_CONFIG, TG_MAX_FILE_SIZE, J_STATUS)
 from tobrot.helper_funcs.copy_similar_file import copy_file
 from tobrot.helper_funcs.display_progress import (humanbytes,
                                                   progress_for_pyrogram)
@@ -244,7 +244,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
     )
     LOGGER.info(thumbnail_location)
     #
-    if UPLOAD_AS_DOC.upper() == 'TRUE':
+    if J_STATUS.UPLOAD_AS_DOC.upper() == 'TRUE':
         thumb = None
         thumb_image_path = None
         if os.path.exists(thumbnail_location):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | Jigarvarma2005
 
 import io
 import logging
@@ -27,7 +27,9 @@ from tobrot.plugins.incoming_message_fn import (g_clonee, g_yt_playlist,
                                                 incoming_message_f,
                                                 incoming_purge_message_f,
                                                 incoming_youtube_dl_f,
-                                                rename_tg_file)
+                                                rename_tg_file,
+                                                upload_as_doc,
+                                                upload_as_stream)
 from tobrot.plugins.new_join_fn import help_message_f, new_join_f
 from tobrot.plugins.rclone_size import check_size_g, g_clearme
 from tobrot.plugins.status_message_fn import (cancel_message_f, exec_message_f,
@@ -77,6 +79,20 @@ if __name__ == "__main__":
             [f"{TELEGRAM_LEECH_COMMAND_G}"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_telegram_download_handler)
+    #
+    incoming_Jigar_upload_as_doc = MessageHandler(
+        upload_as_doc,
+        filters=filters.command(
+            ["toggle_doc"]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(incoming_Jigar_upload_as_doc)
+    #
+    incoming_Jigar_upload_as_stream = MessageHandler(
+        upload_as_stream,
+        filters=filters.command(
+            ["toggle_stream"]) & filters.chat(chats=AUTH_CHANNEL)
+    )
+    app.add_handler(incoming_Jigar_upload_as_stream)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,

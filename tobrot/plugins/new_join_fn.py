@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K
+# (c) Shrimadhav U K | Jigarvarma2005
 
 import logging
 
 import pyrogram
 # the logging things
 from tobrot import AUTH_CHANNEL
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -30,13 +31,14 @@ async def new_join_f(client, message):
 
 
 async def help_message_f(client, message):
-    # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
-    #channel_id = str(AUTH_CHANNEL)[4:]
-    #message_id = 99
-    # display the /help
-
-    await message.reply_text("""join this group forr help-- @GbotStoreSupport\n\n And also don't forget to fork this repo: <a href="https://github.com/gautamajay52/TorrentLeech-Gdrive">TorrentLeech-Gdrive</a>""", disable_web_page_preview=True)
-
+    await message.reply_text("Hello \nI am Telegram Leech Robot 🧲 \nClick Below to know how to use me.", 
+                             reply_markup=InlineKeyboardMarkup(
+                                                               [
+                                                                  [
+                                                                   InlineKeyboardButton("HelpMe", url=f"https://telegra.ph/Universal-Leecher-Help-Menu-03-18")
+                                                                  ]
+                                                               ]
+                            ), disable_web_page_preview=True, parse_mode="markdown")
 
 # async def rename_message_f(client, message):
 #     inline_keyboard = []

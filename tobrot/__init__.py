@@ -81,6 +81,10 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 LOGGER = logging.getLogger(__name__)
 
+J_STATUS = type('obj', (object,), {
+    'UPLOAD_AS_DOC' : "False"
+})
+
 def multi_rclone_init():
     if not os.path.exists('rclone_bak.conf'):  # backup rclone.conf file
         with open('rclone_bak.conf', 'w+', newline="\n", encoding='utf-8') as fole:

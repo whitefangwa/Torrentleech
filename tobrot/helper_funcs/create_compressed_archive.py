@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52
+# (c) Shrimadhav U K | gautamajay52 | Jigarvarma2005
 
 import asyncio
 import logging
@@ -94,8 +94,7 @@ async def untar_me(input_directory):
         uncompressed_file_name = os.path.splitext(base_dir_name)[0]
         m_k_gaut = ['mkdir', f'{uncompressed_file_name}']
         await asyncio.create_subprocess_exec(*m_k_gaut, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
-        g_cmd_t = ["tar", "-xvf",
-                   f"/app/{base_dir_name}", "-C", f"{uncompressed_file_name}"]
+        g_cmd_t = ["tar", "-xvf", f"{base_dir_name}", "-C", f"{uncompressed_file_name}"]
         bc_kanger = await asyncio.create_subprocess_exec(*g_cmd_t, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
         # Wait for the subprocess to finish
         mc, kanger = await bc_kanger.communicate()

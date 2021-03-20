@@ -1,9 +1,3 @@
-from tobrot.sample_config import Config
-
-#Fill your all data, read readme for reference
-
-#FOR CUSTOM COMMANDS READ REAME AND FILL THEM...
-
 class Config(Config):
     TG_BOT_TOKEN = "1416418161:AAF-syqPkfUlX8RwkoXBSITZnZ4XgKfHmUQ"
     APP_ID = 1616386

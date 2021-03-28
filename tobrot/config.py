@@ -7,4 +7,4 @@ class Config(Config):
     OWNER_ID = 750995704
     AUTH_CHANNEL = [-1001354522142]
     DOWNLOAD_LOCATION = "./DOWNLOADS"
-    UPLOAD_AS_DOC = "true"
+    UPLOAD_AS_DOC = "True"

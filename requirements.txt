@@ -4,5 +4,6 @@ hachoir
 Pillow
 pyrogram
 tgcrypto
-youtube-dl
+youtube_dl
 hurry.filesize
+python-dotenv

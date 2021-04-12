@@ -4,5 +4,5 @@ hachoir
 Pillow
 pyrogram
 tgcrypto
-youtube_dl==2020.11.12
+youtube-dl
 hurry.filesize

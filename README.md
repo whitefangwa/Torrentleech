@@ -286,6 +286,8 @@ You have to pass link as
 
 the file will be uploaded as `new.txt`.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/animematrix202/TorrentLeech)
+
 
 ## How to Use?
 
